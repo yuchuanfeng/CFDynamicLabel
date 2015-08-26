@@ -29,3 +29,18 @@
     keyFrame.delegate = self;
     
     [self.contentLabel.layer addAnimation:keyFrame forKey:nil];
+    
+    
+使用方法
+------------
+### 
+    // 创建
+    CFDynamicLabel* testLabel = [[CFDynamicLabel alloc] initWithFrame:CGRectMake(100, 300, 180, 21)];
+    // 设置滚动速度
+    testLabel.speed = 0.6;
+    [self.view addSubview:testLabel];
+    // 设置基本属性
+    testLabel.text = @"我不想说再见,不说再见,越长大越孤单";
+    testLabel.textColor = [UIColor yellowColor];
+    testLabel.font = [UIFont systemFontOfSize:23];
+    testLabel.backgroundColor = [UIColor grayColor];
