@@ -10,6 +10,7 @@
 #import "CFDynamicLabel.h"
 
 @interface ViewController ()
+@property (weak, nonatomic) IBOutlet CFDynamicLabel *testLabel;
 
 @end
 
@@ -20,15 +21,15 @@
     // Do any additional setup after loading the view, typically from a nib.
     self.view.backgroundColor = [UIColor whiteColor];
     
-    CFDynamicLabel* testLabel = [[CFDynamicLabel alloc] initWithFrame:CGRectMake(100, 300, 180, 21)];
+   // CFDynamicLabel* testLabel = [[CFDynamicLabel alloc] initWithFrame:CGRectMake(100, 300, 180, 21)];
     
-    testLabel.speed = 0.6;
-    [self.view addSubview:testLabel];
+    self.testLabel.speed = 0.6;
+    [self.view addSubview:self.testLabel];
     
-    testLabel.text = @"我不想说再见,不说再见,越长大越孤单";
-    testLabel.textColor = [UIColor yellowColor];
-    testLabel.font = [UIFont systemFontOfSize:23];
-    testLabel.backgroundColor = [UIColor grayColor];
+    self.testLabel.text = @"我不想说再见,不说再见,越长大越孤单";
+    self.testLabel.textColor = [UIColor yellowColor];
+    self.testLabel.font = [UIFont systemFontOfSize:23];
+    self.testLabel.backgroundColor = [UIColor grayColor];
 }
 
 - (void)didReceiveMemoryWarning {

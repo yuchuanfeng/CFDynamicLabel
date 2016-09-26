@@ -8,7 +8,7 @@
 
 #import "CFDynamicLabel.h"
 
-@interface CFDynamicLabel()
+@interface CFDynamicLabel()<CAAnimationDelegate>
 @property(nonatomic, strong) UILabel* contentLabel;
 @property(nonatomic, assign) BOOL animationBreak;
 @end
@@ -31,11 +31,26 @@
 {
     if (self = [super initWithFrame:frame]) {
         
-        [self addSubview:self.contentLabel];
-        
-        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(layoutSubviews) name:UIApplicationWillEnterForegroundNotification object:[UIApplication sharedApplication]];
+        [self setup];
     }
     return self;
+}
+
+- (instancetype)initWithCoder:(NSCoder *)aDecoder
+{
+    if (self = [super initWithCoder:aDecoder])
+    {
+        [self setup];
+    }
+    return self;
+}
+
+
+- (void)setup
+{
+    [self addSubview:self.contentLabel];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(layoutSubviews) name:UIApplicationWillEnterForegroundNotification object:[UIApplication sharedApplication]];
 }
 
 - (void)setFrame:(CGRect)frame
@@ -76,9 +91,10 @@
 - (void)willMoveToWindow:(UIWindow *)newWindow
 {
     [super willMoveToWindow:newWindow];
-    
-    [self addAnimation];
-    
+    if (newWindow)
+    {
+        [self addAnimation];
+    }
 }
 
 
@@ -109,7 +125,8 @@
     keyFrame.repeatCount = NSIntegerMax;
     keyFrame.duration = self.speed * self.contentLabel.text.length;
     keyFrame.timingFunctions = @[[CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut], [CAMediaTimingFunction functionWithControlPoints:0 :0 :0.5 :0.5]];
-    keyFrame.delegate = self;
+    __weak typeof(self) weakSelf = self;
+    keyFrame.delegate = weakSelf;
     
     [self.contentLabel.layer addAnimation:keyFrame forKey:nil];
 }

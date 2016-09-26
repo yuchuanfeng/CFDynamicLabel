@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "F573FD4906BB094081ED1F4268326DDD3A6E1980",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "F573FD4906BB094081ED1F4268326DDD3A6E1980" : 9223372036854775807,
+    "DDE97A45152D06BAB7D0DE50BBF46B97CB854B85" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "B8919AAC-2570-4351-8F74-E176F9E8D143",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "F573FD4906BB094081ED1F4268326DDD3A6E1980" : "CFDynamicLabel\/",
+    "DDE97A45152D06BAB7D0DE50BBF46B97CB854B85" : ""
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "CFDynamicLabel",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "CFDynamicLabel\/CFDynamicLabel.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/yuchuanfeng\/CFHoveringTableViewDemo.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "DDE97A45152D06BAB7D0DE50BBF46B97CB854B85"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/yuchuanfeng\/CFDynamicLabel.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "F573FD4906BB094081ED1F4268326DDD3A6E1980"
+    }
+  ]
+}
